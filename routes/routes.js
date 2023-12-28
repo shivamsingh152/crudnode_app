@@ -72,7 +72,8 @@ router.get('/edit/:_id', (req, res) => {
         })
 })
 
-//update user route
+// update user route
+
 router.post('/update/:_id', upload, (req, res) => {
     let id = req.params._id;
     let new_image = '';

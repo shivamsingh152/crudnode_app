@@ -1,43 +1,99 @@
 <%- include('layout/header')%>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 mx-auto mt-4">
-            <div class="card shadow">
-            <div class="card-header bg-warning">
-                <h2 class="text-dark">Add Users</h2>
-            </div>
-            <div class="card-body p-4 form-control">
-            <form action="/add" method="post" id="form" enctype="multipart/form-data" >
-            <div class="mb-3">
-            <label for="">Name</label>
-            <input type="text" name="name" class="form-control form-control-lg"
-            placeholder="Enter name" required/>
-             </div>
-            <div class="mb-3">
-            <label for="email;">Email</label>
-            <input type="email" name="email" class="form-control form-control-lg"
-            placeholder="Enter @email" required/>
-             </div>
-            <div class="mb-3">
-            <label for="phone">Phone</label>
-            <input type="tel" name="phone" class="form-control form-control-lg"
-            placeholder="Enter phone number" required/>
-            </div>
-            <div class="mb-3">
-            <label for="image" class="form-label">Image</label>
-            <input type="file" name="image" class="form-control form-control-lg"
-            required/>
-            </div>
-             <div class="mb-3 d-grid">
-             <input type="submit" name="submit" value="Add User" 
-             class="btn btn-warning btn-lg">
-             </div>
-            </form>
-            </div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto mt-4">
+      <div class="card shadow">
+        <div class="card-header bg-warning">
+          <h2 class="text-dark">Add Users</h2>
         </div>
-    </div>
-</div>
-</div>
+        <div class="card-body p-4 form-control">
+          <form
+            action="/add"
+            method="post"
+            id="form"
+            enctype="multipart/form-data"
+          >
+            <div class="mb-3">
+              <label>Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control form-control-lg"
+                placeholder="Enter name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control form-control-lg"
+                placeholder="Enter @email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                class="form-control form-control-lg"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Image</label>
+              <input
+                type="file"
+                name="image"
+                class="form-control form-control-lg"
+                required
+              />
+            </div>
 
-<%- include('layout/footer')%>
+            <div>
+              <label class="input"> Country </label>
+              <input
+                type="text"
+                name="country"
+                placeholder="Country"
+                size="10"
+                required
+              />
+              <br />
+              <label class="input"> State </label>
+              <input
+                type="text"
+                name="city"
+                placeholder="State"
+                size="10"
+                required
+              />
+              <br />
+              <label class="input"> City </label>
+              <input
+                type="text"
+                name="state"
+                placeholder="City"
+                size="10"
+                required
+              />
+              <br />
+            </div>
+          </form>
+          <div class="mt-4 d-grid">
+            <input
+              type="submit"
+              name="submit"
+              value="Add User"
+              class="btn btn-warning btn-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
